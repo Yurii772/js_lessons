@@ -17,7 +17,3 @@ null == ''//false (boolean). 0 does not equal empty string, it is only equal to 
 false && true || true//true (boolean). && returns last true value, || returns first true value.
 false && (false || true)//false (boolean). First || evaluetes true 'cause it is the last trusy value, && requires both to be true to return true.
 (+null == false) < 1 ** 5//true. +null=0, false=0, (+null==false) = true = 1. 1<1 is true.
-
-
-
-
