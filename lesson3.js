@@ -1,18 +1,8 @@
 let pow = function (base, power){
+   let result = 1;
 for (let i = 0; i <= power; i++) {
-  f = base*base;
-  
+  result *= base; 
 }
-return f;
+return result; 
 }
-console.log(pow (3, 4));
-
-
-
-function isEven(x) {
-  if (x % 2 === 0) { return "true" }
-    else {return flase}
-}
-
-const number = 7;
-console.log(`Число ${number} парне: ${isEven(number)}`);
+console.log(pow (2, 10));
