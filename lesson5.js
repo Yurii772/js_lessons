@@ -24,8 +24,10 @@ let maxPriceDetection = function (services){
          currentValue = (parseInt(services[i]));
          console.log (currentValue);
       if (maxValue < currentValue) {
-         maxValue = currentValue[i];
+         maxValue = currentValue;
       }  
+    
    }
+   return maxValue;
 }
 console.log(maxPriceDetection(services));
