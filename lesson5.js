@@ -18,7 +18,7 @@ for (i in services){
 }
 console.log("Сумма усіх цін ".concat (sumAllPrices(services)).concat ("грн"));
 let maxValue = 0;
-let maxPriceDetection = function (services){
+let maxPrice = function (services){
    for (i in services) {
       if (typeof services[i] === 'function') { }
       else
@@ -28,9 +28,9 @@ let maxPriceDetection = function (services){
    }
    return maxValue;
 }
-console.log("Найбільша ціна: ".concat(i) + (" ") + maxPriceDetection(services) + "грн");
+console.log("Найбільша ціна: ".concat(i) + (" ") + maxPrice(services) + "грн");
 let minValue = (parseInt(services[i]));
-let minPriceDetection = function (services) {
+let minPrice = function (services) {
    for (i in services) {
       if (typeof services[i] === 'function') { }
       else
@@ -42,4 +42,4 @@ let minPriceDetection = function (services) {
    }
    return minValue;
 }
-console.log("Найменша ціна ".concat(i) + (" ") + minPriceDetection(services) + "грн");
+console.log("Найменша ціна ".concat(i) + (" ") + minPrice(services) + "грн");
