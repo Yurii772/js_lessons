@@ -6,6 +6,7 @@ var services = {
    },
    миття_голови: "100 грн"
 };
+services['Розбити скло'] = "200 грн";
 let value = 0;
 let sumAllPrices = function (services) {
 for (i in services){
@@ -14,5 +15,17 @@ for (i in services){
  value += (parseInt(services[i]))}
  return value;
 }
-console.log(sumAllPrices(services))
-
+console.log(sumAllPrices(services));
+let maxValue = 0;
+let maxPriceDetection = function (services){
+   for (i in services) {
+      if (typeof services[i] === 'function') { }
+      else
+         currentValue = (parseInt(services[i]));
+         console.log (currentValue);
+      if (maxValue < currentValue) {
+         maxValue = currentValue[i];
+      }  
+   }
+}
+console.log(maxPriceDetection(services));
