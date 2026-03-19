@@ -7,7 +7,8 @@ var services = {
    миття_голови: "100 грн"
 };
 services['Розбити скло'] = "200 грн";
-services['Цитування Леся Подервʼянського майстром'] = "1000 грн"
+services['Цитування Леся Подервʼянського майстром'] = "1000 грн";
+services['Бородаті анекдоти від майстра'] = '100 грн';
 let value = 0;
 let sumAllPrices = function (services) {
 for (i in services){
@@ -24,7 +25,8 @@ let maxPrice = function (services){
       else
          currentValue = (parseInt(services[i]));
       if (maxValue < currentValue) {
-         maxValue = currentValue;      }  
+         maxValue = currentValue;      
+      }  
    }
    return maxValue;
 }
@@ -37,9 +39,10 @@ let minPrice = function (services) {
          currentValue = (parseInt(services[i]));
       if (minValue > currentValue) {
          minValue = currentValue;
+         minValueKey = i;
       }
 
    }
    return minValue;
 }
-console.log("Найменша ціна ".concat(i) + (" ") + minPrice(services) + "грн");
+console.log("Найменша ціна: ".concat(i) + (" ") + minPrice(services) + "грн");
