@@ -1,12 +1,13 @@
 var services = {
-   стрижка: "60 грн",
    гоління: "80 грн",
+   стрижка: "60 грн",
    d: function() {
-      console.log ("some function")
+      console.log ("some function") //function included in an object to demonstrate that check if element is a functon in manipulation loops work
    },
    миття_голови: "100 грн"
 };
 services['Розбити скло'] = "200 грн";
+services['Цитування Леся Подервʼянського майстром'] = "1000 грн"
 let value = 0;
 let sumAllPrices = function (services) {
 for (i in services){
@@ -15,19 +16,30 @@ for (i in services){
  value += (parseInt(services[i]))}
  return value;
 }
-console.log(sumAllPrices(services));
+console.log("Сумма усіх цін ".concat (sumAllPrices(services)).concat ("грн"));
 let maxValue = 0;
 let maxPriceDetection = function (services){
    for (i in services) {
       if (typeof services[i] === 'function') { }
       else
          currentValue = (parseInt(services[i]));
-         console.log (currentValue);
       if (maxValue < currentValue) {
-         maxValue = currentValue;
-      }  
-    
+         maxValue = currentValue;      }  
    }
    return maxValue;
 }
-console.log(maxPriceDetection(services));
+console.log("Найбільша ціна: ".concat(i) + (" ") + maxPriceDetection(services) + "грн");
+let minValue = (parseInt(services[i]));
+let minPriceDetection = function (services) {
+   for (i in services) {
+      if (typeof services[i] === 'function') { }
+      else
+         currentValue = (parseInt(services[i]));
+      if (minValue > currentValue) {
+         minValue = currentValue;
+      }
+
+   }
+   return minValue;
+}
+console.log("Найменша ціна ".concat(i) + (" ") + minPriceDetection(services) + "грн");
