@@ -1,0 +1,1 @@
+let str = 'Happiness, Time, Task, Apple, Wonderful, Joyful'
